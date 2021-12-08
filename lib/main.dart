@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:contactapp/contact_page.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +24,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List myContacts = listOfContacts;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -37,13 +40,13 @@ class HomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(right: 16),
             child: CircleAvatar(
-              backgroundImage: AssetImage("images/woman.jpg"),
+              backgroundImage: AssetImage("images/female.jpg"),
             ),
           ),
         ],
       ),
       body: ListView.builder(
-          itemCount: 10,
+          itemCount: myContacts.length,
           itemBuilder: (BuildContext context, index) {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,17 +77,18 @@ class HomePage extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ContactPage()));
+                        MaterialPageRoute(builder: (context) => ContactPage(myContact: myContacts[index],)));
                   },
-                  child: const ListTile(
+                  child: ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage("images/lady.jpg"),
+                      backgroundImage: NetworkImage(
+                          "${myContacts[index]["image"]} ${index + 3}"),
                     ),
                     title: Text(
-                      "Techries Ghana",
+                      myContacts[index]['name'],
                       style: TextStyle(fontWeight: FontWeight.w800),
                     ),
-                    subtitle: Text("+233 505 419 44"),
+                    subtitle: Text(myContacts[index]['phone']),
                     trailing: Icon(Icons.more_horiz),
                   ),
                 ),
@@ -106,3 +110,94 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+List listOfContacts = [
+  {
+    'name': 'amos',
+    "location": 'kumasi, Ghana',
+    'email': 'email@mail.com',
+    'phone': '+23356842651',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'lexis',
+    "location": 'Wa, Ghana',
+    'email': 'email@mail.com',
+    'phone': '+23326842656',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'fred de kid',
+    "location": 'Kpaguri, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842653',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'andy',
+    "location": 'bergen, Norway',
+    'email': 'email@mail.com',
+    'phone': '+233247842652',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'miller',
+    "location": 'Malmo, Sweden',
+    'email': 'email@mail.com',
+    'phone': '+23320842659',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'labaadi',
+    "location": 'kambali, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23354842651',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'blinkz',
+    "location": 'dondoli, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23328842658',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'techries',
+    "location": 'kpaguri, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842657',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'patty',
+    "location": 'dondoli, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842655',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'alli',
+    "location": 'danko, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842654',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+  {
+    'name': 'ghideon',
+    "location": 'airstrip, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842656',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random="
+  },
+];
