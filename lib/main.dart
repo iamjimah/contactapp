@@ -76,17 +76,17 @@ class HomePage extends StatelessWidget {
                   ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ContactPage(myContact: myContacts[index],)));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ContactPage(
+                                  myContact: myContacts[index],
+                                )));
                   },
                   child: ListTile(
                     leading: CircleAvatar(
                       backgroundImage: NetworkImage(
-<<<<<<< HEAD
-                          "https://picsum.photos/200/300?random=${index + 5}"),
-=======
                           "${myContacts[index]["image"]} ${index + 3}"),
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
                     ),
                     title: Text(
                       myContacts[index]['name'],
@@ -122,11 +122,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842651',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'lexis',
@@ -134,11 +130,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23326842656',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'fred de kid',
@@ -146,11 +138,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842653',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'andy',
@@ -158,11 +146,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+233247842652',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'miller',
@@ -170,11 +154,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23320842659',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'labaadi',
@@ -182,11 +162,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23354842651',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'blinkz',
@@ -194,11 +170,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23328842658',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'techries',
@@ -206,11 +178,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842657',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'patty',
@@ -218,11 +186,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842655',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'alli',
@@ -230,11 +194,7 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842654',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
   {
     'name': 'ghideon',
@@ -242,10 +202,6 @@ List listOfContacts = [
     'email': 'email@mail.com',
     'phone': '+23356842656',
     'group': "Friends",
-<<<<<<< HEAD
-    'image': "https://picsum.photos/200/300?random=2"
-=======
     'image': "https://picsum.photos/200/300?random="
->>>>>>> d5327a95443ccdd78430b18c2a2b6c5e3b5b1ee0
   },
 ];
