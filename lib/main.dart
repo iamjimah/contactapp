@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:contactapp/contact_page.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(right: 16),
             child: CircleAvatar(
-              backgroundImage: AssetImage("images/woman.jpg"),
+              backgroundImage: AssetImage("images/female.jpg"),
             ),
           ),
         ],
@@ -76,9 +78,10 @@ class HomePage extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ContactPage()));
                   },
-                  child: const ListTile(
+                  child: ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage("images/lady.jpg"),
+                      backgroundImage: NetworkImage(
+                          "https://picsum.photos/200/300?random=${index + 5}"),
                     ),
                     title: Text(
                       "Techries Ghana",
@@ -106,3 +109,94 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+List listOfContacts = [
+  {
+    'name': 'amos',
+    "location": 'kumasi, Ghana',
+    'email': 'email@mail.com',
+    'phone': '+23356842651',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'lexis',
+    "location": 'Wa, Ghana',
+    'email': 'email@mail.com',
+    'phone': '+23326842656',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'fred de kid',
+    "location": 'Kpaguri, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842653',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'andy',
+    "location": 'bergen, Norway',
+    'email': 'email@mail.com',
+    'phone': '+233247842652',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'miller',
+    "location": 'Malmo, Sweden',
+    'email': 'email@mail.com',
+    'phone': '+23320842659',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'labaadi',
+    "location": 'kambali, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23354842651',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'blinkz',
+    "location": 'dondoli, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23328842658',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'techries',
+    "location": 'kpaguri, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842657',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'patty',
+    "location": 'dondoli, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842655',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'alli',
+    "location": 'danko, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842654',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+  {
+    'name': 'ghideon',
+    "location": 'airstrip, Wa',
+    'email': 'email@mail.com',
+    'phone': '+23356842656',
+    'group': "Friends",
+    'image': "https://picsum.photos/200/300?random=2"
+  },
+];
